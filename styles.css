@@ -10,87 +10,12 @@ body {
 
 .container {
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .square {
     position: absolute;
-    width: 100px;
-    height: 100px;
     background-color: #00aaff;
-    transform-origin: bottom left;
-}
-
-.base {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.left {
-    width: 70.7px;
-    height: 70.7px;
-    top: -70.7px;
-    left: 0;
-    transform: rotate(-45deg);
-}
-
-.right {
-    width: 70.7px;
-    height: 70.7px;
-    top: -70.7px;
-    right: 0;
-    transform: rotate(45deg);
-}
-
-/* さらに枝分かれする四角形のスタイルを設定 */
-.square .left .left,
-.square .left .right,
-.square .right .left,
-.square .right .right {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: #00cc44;
-    transform-origin: bottom left;
-}
-
-.square .left .left .left,
-.square .left .left .right,
-.square .left .right .left,
-.square .left .right .right,
-.square .right .left .left,
-.square .right .left .right,
-.square .right .right .left,
-.square .right .right .right {
-    position: absolute;
-    width: 35.35px;
-    height: 35.35px;
-    background-color: #00e066;
-    transform-origin: bottom left;
-}
-
-/* 8回目の枝分かれまでの設定 */
-.square .left .left .left .left,
-.square .left .left .left .right,
-.square .left .left .right .left,
-.square .left .left .right .right,
-.square .left .right .left .left,
-.square .left .right .left .right,
-.square .left .right .right .left,
-.square .left .right .right .right,
-.square .right .left .left .left,
-.square .right .left .left .right,
-.square .right .left .right .left,
-.square .right .left .right .right,
-.square .right .right .left .left,
-.square .right .right .left .right,
-.square .right .right .right .left,
-.square .right .right .right .right {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-color: #00ff88;
     transform-origin: bottom left;
 }
