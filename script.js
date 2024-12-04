@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const newSize = size * Math.sqrt(2) / 2;
         const newDepth = depth - 1;
 
-        const leftX = x - newSize * Math.sin(angle * Math.PI / 180);
-        const leftY = y + size + newSize * Math.cos(angle * Math.PI / 180);
+        const leftX = x + size * Math.cos(angle * Math.PI / 180) - newSize * Math.cos((angle - 45) * Math.PI / 180);
+        const leftY = y + size * Math.sin(angle * Math.PI / 180) + newSize * Math.sin((angle - 45) * Math.PI / 180);
         const rightX = x + size * Math.cos(angle * Math.PI / 180);
         const rightY = y + size * Math.sin(angle * Math.PI / 180);
 
@@ -25,5 +25,5 @@ document.addEventListener("DOMContentLoaded", function () {
         drawSquare(rightX, rightY, newSize, angle + 45, newDepth);
     }
 
-    drawSquare(window.innerWidth / 2 - 50, 0, 100, 0, 12);
+    drawSquare(window.innerWidth / 2 - 50, 50, 100, 0, 12);
 });
