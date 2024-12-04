@@ -28,10 +28,10 @@ body {
 }
 
 #left {
-    width: 70.7px; /* 100px * sqrt(2) / 2 */
+    width: 70.7px; 
     height: 70.7px;
     bottom: 100px;
-    left: 179.3px; /* 250px - width */
+    left: 179.3px; 
     transform: rotate(45deg);
     transform-origin: bottom right;
 }
