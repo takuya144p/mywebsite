@@ -14,29 +14,29 @@ body {
     height: 600px;
 }
 
-.tree {
+.square {
     position: absolute;
+    width: 100px;
+    height: 100px;
     background-color: #00aaff;
-    transform-origin: bottom center;
+    transform-origin: bottom left;
 }
 
 .base {
-    width: 100px;
-    height: 100px;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.tree.left {
-    width: 70.7px; /* 100px * sqrt(2) / 2 */
+.left {
+    width: 70.7px;
     height: 70.7px;
     top: -70.7px;
     left: 0;
     transform: rotate(-45deg);
 }
 
-.tree.right {
+.right {
     width: 70.7px;
     height: 70.7px;
     top: -70.7px;
@@ -44,11 +44,11 @@ body {
     transform: rotate(45deg);
 }
 
-/* このようにさらに細かい部分を追加 */
-.tree.left .left,
-.tree.left .right,
-.tree.right .left,
-.tree.right .right {
+/* さらに枝分かれする四角形のスタイルを設定 */
+.square.left .left,
+.square.left .right,
+.square.right .left,
+.square.right .right {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -56,25 +56,25 @@ body {
     transform-origin: bottom center;
 }
 
-.tree.left .left {
+.square.left .left {
     top: -50px;
     left: 0;
     transform: rotate(-45deg);
 }
 
-.tree.left .right {
+.square.left .right {
     top: -50px;
     right: 0;
     transform: rotate(45deg);
 }
 
-.tree.right .left {
+.square.right .left {
     top: -50px;
     left: 0;
     transform: rotate(-45deg);
 }
 
-.tree.right .right {
+.square.right .right {
     top: -50px;
     right: 0;
     transform: rotate(45deg);
