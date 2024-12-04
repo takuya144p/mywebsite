@@ -10,46 +10,72 @@ body {
 
 .container {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
 }
 
 .tree {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: green;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    transform-origin: bottom left;
-    animation: growTree 5s infinite;
+    background-color: #00aaff;
+    transform-origin: bottom center;
 }
 
-@keyframes growTree {
-    0% {
-        width: 50px;
-        height: 50px;
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    25% {
-        width: 100px;
-        height: 100px;
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-    50% {
-        width: 150px;
-        height: 150px;
-        transform: translate(-50%, -50%) rotate(90deg);
-    }
-    75% {
-        width: 200px;
-        height: 200px;
-        transform: translate(-50%, -50%) rotate(135deg);
-    }
-    100% {
-        width: 250px;
-        height: 250px;
-        transform: translate(-50%, -50%) rotate(180deg);
-    }
+.base {
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tree.left {
+    width: 70.7px; /* 100px * sqrt(2) / 2 */
+    height: 70.7px;
+    top: -70.7px;
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.tree.right {
+    width: 70.7px;
+    height: 70.7px;
+    top: -70.7px;
+    right: 0;
+    transform: rotate(45deg);
+}
+
+/* このようにさらに細かい部分を追加 */
+.tree.left .left,
+.tree.left .right,
+.tree.right .left,
+.tree.right .right {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #00cc44;
+    transform-origin: bottom center;
+}
+
+.tree.left .left {
+    top: -50px;
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.tree.left .right {
+    top: -50px;
+    right: 0;
+    transform: rotate(45deg);
+}
+
+.tree.right .left {
+    top: -50px;
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.tree.right .right {
+    top: -50px;
+    right: 0;
+    transform: rotate(45deg);
 }
