@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.tree {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: bottom left;
+    animation: growTree 5s infinite;
+}
+
+@keyframes growTree {
+    0% {
+        width: 50px;
+        height: 50px;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+        width: 100px;
+        height: 100px;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    50% {
+        width: 150px;
+        height: 150px;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+    75% {
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%, -50%) rotate(135deg);
+    }
+    100% {
+        width: 250px;
+        height: 250px;
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+}
