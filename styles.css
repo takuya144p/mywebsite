@@ -32,7 +32,7 @@ body {
     height: 70.7px;
     bottom: 100px;
     left: 179.3px; /* 250px - width */
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
     transform-origin: bottom right;
 }
 
@@ -41,6 +41,6 @@ body {
     height: 70.7px;
     bottom: 100px;
     left: 250px;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
     transform-origin: bottom left;
 }
